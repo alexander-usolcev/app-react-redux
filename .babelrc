@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "es2015", {"modules": false}],
+      "stage-2",
+      "es2017",
+      "react"
+  ],
+  "plugins": [
+    "transform-object-assign",
+    "react-hot-loader/babel"
+  ]
+}

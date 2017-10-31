@@ -1,0 +1,15 @@
+/*!
+ * app-react-redux v1.0.0
+ * 
+ * Author: Alexander Usolcev <alexander.usolcev@gmail.com>
+ * Date: 2017-10-31 10:36:57
+ * 
+ */
+/* Reset, variables, mixins */
+body {
+  padding: 15px;
+  color: #60c4b5;
+}
+body .counter {
+  font-weight: bold;
+}
