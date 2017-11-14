@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { routerReducer as router } from 'react-router-redux';
+// import { routerReducer as router } from 'react-router-redux';
 import { reducer as modal } from 'react-redux-easy-modal';
 
 import userData from './userData';
@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     counter,
     modal,
 
-    router
+    // router
 });
 
 export default rootReducer;

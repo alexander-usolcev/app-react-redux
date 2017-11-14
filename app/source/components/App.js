@@ -1,18 +1,16 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Route, withRouter } from 'react-router';
 
 import Index from '../containers/index';
 import Socket from '../containers/socket';
 
-import Counter from '../containers/common/Counter';
+import Layout from './common/Layout';
 
 const App = () => (
-    <div>
-        <Counter />
-
-        <Route path="/" component={Index} exact />
-        <Route path="/socket" component={Socket} />
-    </div>
+	<Layout>
+		<Route path="/" component={Index} exact />
+		<Route path="/socket" component={Socket} />
+	</Layout>
 );
 
 export default withRouter(App);

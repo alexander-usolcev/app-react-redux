@@ -18,7 +18,7 @@ export function getUserId() {
  * @return {Promise}
  */
 export function getUserInfo(options) {
-    if (store.getState().userData.login) {
+    if (store.getState().userData.firstName) {
         return Promise.resolve(store.getState().userData);
     }
 
