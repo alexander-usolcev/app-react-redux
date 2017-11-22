@@ -2,50 +2,53 @@ import { ADD_USER_DATA, FETCH_USER_DATA, RECEIVED_USER_DATA } from '../const/act
 import Lang from '../lang';
 
 let initialUserData = {
-    firstName: null,
-    isFetching: false
+	isFetching: false,
+	firstName: null,
+	lastName: null,
+	gitProfile: null,
+	id: null
 };
 
 /**
  * Метод установки локализации.
  */
 function setLocale(userData) {
-    let locale = 'en';
+	let locale = 'en';
 
-    if (userData.locale === 'ru') {
-        locale = 'ru';
-    }
+	if (userData.locale === 'ru') {
+		locale = 'ru';
+	}
 
-    Lang.setLocale(locale);
+	Lang.setLocale(locale);
 
-    return locale;
+	return locale;
 }
 
 const userData = (state = initialUserData, action) => {
-    switch (action.type) {
-        case ADD_USER_DATA:
-            let userData = {
-                ...state,
-                ...action.userData
-            };
+	switch (action.type) {
+		case ADD_USER_DATA:
+			let userData = {
+				...state,
+				...action.userData
+			};
 
-            // Устанавливаем локаль пользователя.
-            userData.locale = setLocale(userData);
+			// Устанавливаем локаль пользователя.
+			userData.locale = setLocale(userData);
 
-            return userData;
-        case FETCH_USER_DATA:
-            return {
-                ...state,
-                isFetching: true
-            };
-        case RECEIVED_USER_DATA:
-            return {
-                ...state,
-                isFetching: false
-            };
-        default:
-            return state;
-    }
+			return userData;
+		case FETCH_USER_DATA:
+			return {
+				...state,
+				isFetching: true
+			};
+		case RECEIVED_USER_DATA:
+			return {
+				...state,
+				isFetching: false
+			};
+		default:
+			return state;
+	}
 };
 
 export default userData;

@@ -19,7 +19,7 @@ import '../assets/css/style.less';
 
 const render = Component => {
 	ReactDOM.render(
-		<AppContainer>
+		<AppContainer warnings={false}>
 			<Provider store={store}>
 				<ConnectedRouter history={history}>
 					<Component />

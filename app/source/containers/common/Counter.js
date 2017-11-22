@@ -54,8 +54,6 @@ class Counter extends PureComponent {
 	}
 
 	render() {
-
-		console.log(this.onIncrement());
 		const { counter } = this.props;
 
 		return (

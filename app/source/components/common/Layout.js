@@ -2,9 +2,11 @@ import React from 'react';
 
 import Counter from '../../containers/common/Counter';
 import Footer from './Footer';
-import DevTools from '../../containers/DevTools';
+// import DevTools from '../../containers/DevTools';
 
-const Layout = (props) => (
+import { isDev } from '../../utils/index';
+
+const Layout = props => (
 	<div>
 		<Counter />
 
@@ -12,7 +14,7 @@ const Layout = (props) => (
 
 		<Footer />
 
-		<DevTools />
+		{isDev() && <DevTools />}
 	</div>
 );
 

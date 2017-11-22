@@ -1,8 +1,8 @@
 /*!
- * app-react-redux v1.0.0
+ * app-react-redux v1.0.2
  * 
  * Author: Alexander Usolcev <alexander.usolcev@gmail.com>
- * Date: 2017-10-31 10:36:57
+ * Date: 2017-11-21 17:00:27
  * 
  */
 /* Reset, variables, mixins */
@@ -12,4 +12,25 @@ body {
 }
 body .counter {
   font-weight: bold;
+}
+button {
+  margin: 0 5px;
+}
+button.open-modal {
+  margin: 20px 0 0;
+}
+.footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+.messages {
+  display: flex;
+  align-items: center;
+}
+.socket-log {
+  display: inline-block;
+  margin-left: 10px;
+  height: 150px;
+  overflow-y: scroll;
 }

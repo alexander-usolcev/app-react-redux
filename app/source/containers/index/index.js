@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import cn from 'classnames';
 
-import { Modal, MobileModals, showModal, hideModal } from 'react-redux-easy-modal';
+import { Modal, MobileModals, showModal, hideModal, ModalContainer } from 'react-redux-easy-modal';
 
 import { fetchUserDataIfNeeded } from '../../actions/index';
 import Lang from '../../lang';
+
+import ModalForm from '../../components/index/ModalForm';
+
 
 class Index extends PureComponent {
 	// noinspection JSCheckFunctionSignatures
@@ -25,11 +27,19 @@ class Index extends PureComponent {
 
 	render() {
 		const { isFetching, userData } = this.props;
-		const { firstName, lastName, gitProfile } = userData;
+		const { firstName, gitProfile, lastName } = userData;
 
 		return (
-			<div className={cn({ 'dn': isFetching })}>
+			<div>
 				<a href={gitProfile} target="_blank">{firstName} git page</a>
+
+				<div>
+					<button className="open-modal" onClick={showModal}>open modal form</button>
+				</div>
+
+				<Modal>
+					<ModalForm />
+				</Modal>
 			</div>
 		)
 	}
