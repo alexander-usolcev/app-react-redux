@@ -37,14 +37,14 @@ module.exports = {
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
 
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            filename: 'vendor.min.js',
-            minChunks(module) {
-                let context = module.context;
-                return context && context.indexOf('node_modules') >= 0;
-            },
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor',
+        //     filename: 'vendor.min.js',
+        //     minChunks(module) {
+        //         let context = module.context;
+        //         return context && context.indexOf('node_modules') >= 0;
+        //     },
+        // }),
 
         extractLess
     ],

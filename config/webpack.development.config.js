@@ -20,9 +20,9 @@ module.exports = new Config().extend('./config/webpack.base.config.js').merge({
             DEBUG: true
         }),
 
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'manifest'
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'manifest'
+        // }),
     ],
 
     devtool: 'eval-source-map'
